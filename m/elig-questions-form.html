@@ -562,9 +562,7 @@
                                 <h3 class="main_question">Eligibility Summary</h3>
                                 <!-- /Gunnar, a bit of code is required her to only show the success div  below if certain radiobuttons/checkboxes in the eligibility quesionnaire are not checked 
                                     - use the div <div id="unsuccess"> and then copy the contents of the div -->
-                                    <p>You are ELIGIBLE to complete the online survey exploring digital health preferences and
-                                        needs for older adults with poor sleep.</p>
-                                        <p>Please read the information sheet and tick the box for consent before proceeding.</p>
+                                    <p>You are ELIGIBLE ..</p>
                                         <p></p>
                                     <div class="wrapper_success"> 
                                         <svg class="checkmark_success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
@@ -572,13 +570,13 @@
                                         <path class="checkmark__check_success" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
                                         </svg>
                                     </div>
-                                       <h4><span>You are eligible to participate!</span></h4><small>Please read the information sheet below and tick the box for consent before beginning the survey.</small>
-                                       <div class="form-group terms">
+                                       <h4><span>You are eligible to participate!</span></h4>
+<!--                                       <div class="form-group terms">
                                     <label class="container_check">Please read and provide consent to <a href="#" data-toggle="modal" data-target="#terms-txt">Information Sheet (click here)</a>
-                                        <input type="checkbox" id=consent__ID name="Consent" value="Yes" required>
+                                        <input type="checkbox" id=consent__ID name="Consent" value="Yes" >
                                         <span class="checkmark"></span>
                                     </label>
-                                </div>
+                                </div>-->
                             </div>
                             <!-- S__ID -->
                         </div>
@@ -586,7 +584,7 @@
                         <div id="bottom-wizard">
                             <button type=button d=-1  id=previous__ID class="backward">Previous</button>
                             <button type=submit id=next__ID d=1  class="forward">Next</button>
-                            <button type="submit" id=submit1__ID class="submit">I've consented, begin the survey</button>
+                            <button type="submit" id=submit1__ID class="submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -649,7 +647,6 @@
                 d = parseInt(d);
                 //console.log(d)
                 if (d < 0) {
-                    if(current_I===17) current_I=12;
                     show_section(current_I - 1);
                 }
                 else {
@@ -699,6 +696,31 @@
                     parseInt($("input[name='ISI_1c']:checked").val())
                     ).toString();
                 //ISI-------------------
+                //PHQ9-------------------
+                scores.PHQ=(
+                    parseInt($("input[name='PHQ_1']:checked").val())+
+                    parseInt($("input[name='PHQ_2']:checked").val())+
+                    parseInt($("input[name='PHQ_3']:checked").val())+
+                    parseInt($("input[name='PHQ_4']:checked").val())+
+                    parseInt($("input[name='PHQ_5']:checked").val())+
+                    parseInt($("input[name='PHQ_6']:checked").val())+
+                    parseInt($("input[name='PHQ_7']:checked").val())+
+                    parseInt($("input[name='PHQ_8']:checked").val())+
+                    parseInt($("input[name='PHQ_9']:checked").val())
+                    ).toString();
+                //PHQ9-------------------
+                //Stop Bang-------------------
+                scores.SB=(
+                    parseInt($("input[name='SB_1']:checked").val())+
+                    parseInt($("input[name='SB_2']:checked").val())+
+                    parseInt($("input[name='SB_3']:checked").val())+
+                    parseInt($("input[name='SB_4']:checked").val())+
+                    parseInt($("input[name='SB_5']:checked").val())+
+                    parseInt($("input[name='SB_6']:checked").val())+
+                    parseInt($("input[name='SB_7']:checked").val())+
+                    parseInt($("input[name='SB_8']:checked").val())
+                    ).toString();
+                //Stop Bang-------------------
             }
             //---------------------------------------
             m.before_submit = function (data, index) {
@@ -707,8 +729,10 @@
                 data.ISI_1=scores.ISI_1;
                 //ISI-------------------
                 //PHQ9-------------------
+                data.PHQ=scores.PHQ;
                 //PHQ9-------------------
                 //STOP-------------------
+                data.SB=scores.SB;
                 //STOP-------------------
             }
             //---------------------------------------
@@ -722,7 +746,8 @@
                         $("input[name='englishfluency']:checked").val() == 'N' ||
                         $("input[name='smartphone']:checked").val() == 'N' ||
                         scores.ISI < 10 ||
-                        scores.PHQ < 6) 
+                        scores.PHQ < 10 ||
+                        scores.SB < 6) 
                         {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
