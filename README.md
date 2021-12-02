@@ -1,2 +1,2 @@
-# success-survey
-Success Survey
+# succeed-survey
+Succeed Survey

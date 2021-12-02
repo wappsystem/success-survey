@@ -7,7 +7,7 @@
         $vm.api_address="https://api.wappsystem.com";
         if(window.location.toString().indexOf('_p=1')!=-1) $vm.api_address="https://api.wappsystem.com:3000";
         //------------------------------------
-        $vm.default_title="Success Screening";
+        $vm.default_title="Succeed Screening";
         //------------------------------------
         var ready1=function(){
             var set_layout=function(){                
@@ -28,7 +28,7 @@
                     //document.title=name+" | "+
                     $vm.default_title;
                 }
-                $("meta[name='description']").attr("content", "Success Screening");
+                $("meta[name='description']").attr("content", "Succeed Screening");
                 $("body").removeClass();
                 $("body").addClass('body_background_default');
                 $vm.active_id=undefined;
