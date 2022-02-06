@@ -5,16 +5,12 @@
 				<div class="content-left-wrapper">
 					<!--<a href="index.html" id="logo"><img src="img/logo_sf_white.png" height="35px" alt=""></a>-->
 					<div>
-						<h2>Welcome to the succeed..</h2>
-						<h3>Your responses to this survey will..</h3>
-						<h3>You are eligible to complete the survey if you are:</h3>
-						    <p>1. Between 50 and 80 years<br>
-                                2. Have insomnia symptoms..<br>
-                                3. ..<br>
-                                4. ..</p>
-                                <p>All answers are anonymous..</p>
-						    <small>The ethical aspects of this research project have been approved by the Sydney Local Health District (SLHD) Health Research Ethics Committee (HREC) - Reference XXX-XXXXX</small><br><br>
-                            <p><i>Read the <u><a style='color:white' href="m/Online Survey PISCF.pdf" target="_blank">Participant information Statement Here</a></u> to learn more about the research study or contact the research team at sleepfix@woolcock.org.au</i></p>
+						<h2>Welcome to the SUCCEED Research Study</h2>
+						<h3>We have invited you to take part in an exciting new research study using a novel sleep program that can be accessed via a website or iOS app and aims to help improve your insomnia symptoms using digital Cognitive Behavioural Therapy for Insomnia (CBT-I). In this study, we would like to find out if digital CBT-I improves insomnia symptoms as well as cognitive performance.</h3>
+						<h3>This is a 12-week study for individuals who are over the age of 50, have sleep and cognitive problems and access to a smartphone or computer. </h3>
+                        <h3>To determine if you are eligible to participate in the next phase of our study, you will be asked to complete a short series of questionnaires (max. 5-10 minutes). You will know right away if you are eligible for the next phase of this study.</h3>
+                        <h3>Your participation in this study is voluntary. </h3>
+                        <!--<p><i>Read the <u><a style='color:white' href="m/Online Survey PISCF.pdf" target="_blank">Participant information Statement Here</a></u> to learn more about the research study or contact the research team at sleepfix@woolcock.org.au</i></p>-->
 						    
 						<!--<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>-->
 					</div>
@@ -36,17 +32,17 @@
                             <div id=S1__ID>
                                 <h3 class="main_question"><strong>1/14</strong></h3>
                                 <div class="form-group">
-                                <h6>I have read the Participant information Statement and consenting to participate </h6>
+                                <h6>I agree on completing a short series of questionnaires to determine if I am suitable for this study.</h6>
                                     <label class="container_radio">Yes
-                                        <input type="radio" name="Consent" id=consent__ID value="Y" required>
+                                        <input type="radio" name="Agree" id=agree__ID value="Y" required>
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container_radio">No
-                                        <input type="radio" name="Consent" value="N">
+                                        <input type="radio" name="Agree" value="N">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <div id=not_consenting__ID style='display:none'><h6>You must consent to participate in the screening</h6></div>
+                                <div id=not_agreeing__ID style='display:none'><h6>You must agree to continue</h6></div>
                                 <!-- /row -->
                             </div>
                             <div id=S2__ID>
@@ -58,17 +54,265 @@
                                 <div class="form-group">
                                 <h6>Are you fluent in English?</h6>
                                     <label class="container_radio">Yes
-                                                <input type="radio" name="englishfluency" value="Y" required>
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container_radio">No
-                                                <input type="radio" name="englishfluency" value="N">
-                                                <span class="checkmark"></span>
-                                            </label>
+                                        <input type="radio" name="englishfluency" value="Y" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">No
+                                        <input type="radio" name="englishfluency" value="N">
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
-                                <!-- /row -->
+                                <div class="form-group">
+                                <h6>Do you have a smartphone?</h6>
+                                    <label class="container_radio">Yes
+                                        <input type="radio" name="smartphone" value="Y" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">No
+                                        <input type="radio" name="smartphone" value="N">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
                             </div>
                             <div id=S3__ID>
+                                <h3 class="main_question"><strong>3/14</strong></h3>
+                                <div class="form-group">
+                                <h6>Are you a shift-worker (in a regular work week)?</h6>
+                                    <label class="shift_worker">No
+                                        <input type="radio" name="shift_worker" value="N" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="shift_worker">Yes, I am on rotating shifts
+                                        <input type="radio" name="shift_worker" value="rotating">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="shift_worker">Yes, I am on evening shifts.
+                                        <input type="radio" name="shift_worker" value="evening">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="shift_worker">Yes, I am on night shifts. 
+                                        <input type="radio" name="shift_worker" value="night">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <h6>Have you travelled across more than 2 time-zones in the las 30 days? </h6>
+                                    <label class="container_radio">Yes
+                                        <input type="radio" name="travelled" value="Y" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">No
+                                        <input type="radio" name="travelled" value="N">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>        
+                            </div>
+                            <div id=S4__ID>
+                                <h3 class="main_question"><strong>4/14</strong></h3>
+                                <div class="form-group">
+                                    <h6>Have you been diagnosed with any one or more of the following medical and/or psychiatric illnesses/disorders?</h6>
+                                    <div class="form-group">
+                                        <h6>Major head injury</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="head_injury" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="head_injury" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Stroke or TIA</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="stroke" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="stroke" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Loss of consciousness over 30 minutes</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="consciousness" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="consciousness" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Epilepsy</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="epilepsy" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="epilepsy" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Multiple sclerosis</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="ms" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="ms" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Chronic pain</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="pain" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="pain" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Bipolar disorder</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="bipolar" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="bipolar" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Dementia</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="dementia" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="dementia" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                </div>        
+                            </div>
+                            <div id=S5__ID>
+                                <h3 class="main_question"><strong>5/14</strong></h3>
+                                <div class="form-group">
+                                    <h6>Have you been diagnosed with any one or more of the following sleep disorders?</h6>
+                                    <div class="form-group">
+                                        <h6>Obstructive sleep apnoea</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="osa" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="osa" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Sleep behaviour disorder (i.e sleep talking/walking, REM) </h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="sbd" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="sbd" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Circadian Rhythm disorder</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="crd" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="crd" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Restless leg syndrome</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="rls" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="rls" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Narcolepsy</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="narcolepsy" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="narcolepsy" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                </div>
+                            </div>
+                            <div id=S6__ID>
+                                <h3 class="main_question"><strong>6/14</strong></h3>
+                                <div class="form-group">
+                                    <h6>Are you currently taking any of the following medications or therapies regularly <b>(&ge: 3 times a week)</b>?</h6>
+                                    <div class="form-group">
+                                        <h6>Prescribed medication (e.g. Benzodiazepines, sedative hypnotics, opioids, antipsychotics, mood stabilisers, or cholinesterase inhibitors)</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="medication" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="medication" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Continuous positive airway pressure (CPAP) therapy</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="cpap" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="cpap" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Dental snoring device</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="mas" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="mas" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                    <div class="form-group">
+                                        <h6>Participating in or has participated in a research study of an investigational agent or device in the lasts 4 weeks</h6>
+                                        <label class="container_radio">Yes
+                                            <input type="radio" name="study" value="Y" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                            <input type="radio" name="study" value="N">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>        
+                                </div>
+                            </div>
+                            <div id=S7__ID>
                                 <h3 class="main_question"><strong>3/14</strong></h3>
                                 <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
                                 <div class="form-group">
@@ -118,7 +362,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div id=S4__ID>
+                            <div id=S8__ID>
                                 <h3 class="main_question"><strong>4/14</strong></h3>
                                 <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
                                 <div class="form-group">
@@ -168,7 +412,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div id=S5__ID>
+                            <div id=S9__ID>
                                 <h3 class="main_question"><strong>5/14</strong></h3>
                                 <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
                                 <div class="form-group">
@@ -221,7 +465,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div id=S6__ID>
+                            <div id=S10__ID>
                                 <h3 class="main_question"><strong>6/14</strong></h3>
                                 <p>Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s)</p>
                                 <div class="form-group">
@@ -249,7 +493,7 @@
                                 </div>
                             </div>
                             <!--PHQ-->
-                            <div id=S7__ID>
+                            <div id=S11__ID>
                                 <h3 class="main_question"><strong>7/14</strong></h3>
                                 <div class="form-group">
                                     <h6>1. Little interest or pleasure in doing things</h6>
@@ -294,7 +538,7 @@
                                 </div>
                                 </div>
                             </div>
-                            <div id=S8__ID>
+                            <div id=S12__ID>
                                 <h3 class="main_question"><strong>8/14</strong></h3>
                                 <div class="form-group">
                                     <h6>3. Trouble falling or staying asleep, sleeping too much</h6>
@@ -339,7 +583,7 @@
                                 </div>
                                 </div>
                             </div>
-                            <div id=S9__ID>
+                            <div id=S13__ID>
                                 <h3 class="main_question"><strong>9/14</strong></h3>
                                 <div class="form-group">
                                     <h6>5. Poor appetite or overeating</h6>
@@ -384,7 +628,7 @@
                                 </div>
                                 </div>
                             </div>
-                            <div id=S10__ID>
+                            <div id=S14__ID>
                                 <h3 class="main_question"><strong>10/14</strong></h3>
                                 <div class="form-group">
                                     <h6>7. Trouble concentrating on things, such as reading the newspaper or watching television</h6>
@@ -429,7 +673,7 @@
                                 </div>
                                 </div>
                             </div>
-                            <div id=S11__ID>
+                            <div id=S15__ID>
                                 <h3 class="main_question"><strong>11/14</strong></h3>
                                 <div class="form-group">
                                     <h6>9. Thoughts that you would be better off dead or of hurting yourself in some way</h6>
@@ -454,7 +698,7 @@
                                 </div>
                             </div>
 
-                            <div id=S12__ID>
+                            <div id=S16__ID>
                                 <h3 class="main_question"><strong>12/14</strong></h3>
                                 <div class="form-group">
                                     <h6>Do you <b>snore loudly</b> (loud enough to be heard through closed
@@ -499,7 +743,7 @@
                                     </div>
                                   </div>                    
                             </div>
-                            <div id=S13__ID>
+                            <div id=S17__ID>
                                 <h3 class="main_question"><strong>13/14</strong></h3>
                                 <div class="form-group">
                                     <h6>Do you have or are being treated for high blood pressure?</h6>
@@ -539,10 +783,9 @@
                                           <span class="checkmark"></span> No</label>
                                       </fieldset>
                                     </div>
-                                  </div>
-                    
+                                  </div>                   
                             </div>
-                            <div id=S14__ID>
+                            <div id=S18__ID>
                                 <h5 class="main_question"><strong>14/14</strong></h6>
                                 <div class="form-group">
                                     <h6>Neck size large ? (measured around Adams apple)?<br>
@@ -573,7 +816,138 @@
                                     </div>
                                   </div>
                             </div>
-                            <div id=S15__ID>
+                            <div id=S19__ID>
+                                <h3 class="main_question"><strong>19/14</strong></h3>
+                                <div class="form-group">
+                                <h6>What is your date of birth?</h6>
+                                    <input type="date" name="dob" class="form-control" placeholder="DD/MM/YYYY" required>
+                                </div>
+                                <div class="form-group">
+                                <h6>Gender</h6>
+                                    <label class="container_radio">Male
+                                        <input type="radio" name="gender" value="male" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Female
+                                        <input type="radio" name="gender" value="female">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                <h6>Where were you born?</h6>
+                                    <label class="container_radio">Australia
+                                        <input type="radio" name="born" value="Australia" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Asia (including the subcontinent), Middle East North Africa, or Southern Europe
+                                        <input type="radio" name="born" value="Asia">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Other
+                                        <input type="radio" name="born" value="Other">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                <h6>Are you of Aboriginal or Torres Strait Islander descent?</h6>
+                                    <label class="container_radio">Yes
+                                        <input type="radio" name="indigineous" value="Y" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">No
+                                        <input type="radio" name="indigineous" value="N">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S20__ID>
+                                <h3 class="main_question"><strong>20/14</strong></h3>
+                                <div class="form-group">
+                                <h6>What is your current employment status?</h6>
+                                    <label class="container_radio">Full-time employed
+                                        <input type="radio" name="employment" value="full-time" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Part-time employed
+                                        <input type="radio" name="employment" value="part-time">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Unemployed
+                                        <input type="radio" name="employment" value="unemployed">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Retired
+                                        <input type="radio" name="employment" value="retired">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Full-time homemaker or carer
+                                        <input type="radio" name="employment" value="carer">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                <h6>What is your highest level of education?</h6>
+                                    <label class="container_radio">Less than Year 12 or equivalent
+                                        <input type="radio" name="education" value="y12-" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Year 12 or equivalent
+                                        <input type="radio" name="education" value="y12">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Vocational Qualification i.e. TAFE
+                                        <input type="radio" name="education" value="vocational">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Associate diploma
+                                        <input type="radio" name="education" value="associate">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Undergraduate diploma
+                                        <input type="radio" name="education" value="undergraduate">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Bachelor degree (including honours)
+                                        <input type="radio" name="education" value="bachelor">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Postgraduate diploma
+                                        <input type="radio" name="education" value="postgraduate">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Master’s degree
+                                        <input type="radio" name="education" value="master">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Doctorate
+                                        <input type="radio" name="education" value="doctorate">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S21__ID>
+                                <h3 class="main_question"><strong>21/14</strong></h3>
+                                <div class="form-group">
+                                <h6>Current living circumstances:</h6>
+                                    <label class="container_radio">Independent (living alone)
+                                        <input type="radio" name="living" value="independent" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Living with partner, friends
+                                        <input type="radio" name="living" value="partner">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Living with family/relatives
+                                        <input type="radio" name="living" value="family">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Depends completely on person living with them in their own home, or with relatives
+                                        <input type="radio" name="living" value="dependent">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=S22__ID>
                                 <!--<h3 class="main_question">Eligibility Summary</h3>-->
                                 <!-- /Gunnar, a bit of code is required her to only show the succeed div  below if certain radiobuttons/checkboxes in the eligibility quesionnaire are not checked 
                                     - use the div <div id="unsuccess"> and then copy the contents of the div -->
@@ -633,7 +1007,7 @@
         function F__ID() {
             VmInclude: '__CURRENT_PATH__/form.01.js'
             //---------------------------------------
-            var N = 15;
+            var N = 22;
             var current_I = 1;
             //---------------------------------------
             m.before_submit = function (data, index) {
@@ -647,7 +1021,7 @@
                 $('#shift__ID').removeAttr('required');
                 $('#submit1__ID').css('display','none')
                 $('#next__ID').css('display','none')
-                show_section(1);
+                show_section(21);
                 //console.log("Load")
             })
 
@@ -788,14 +1162,14 @@
                     show_section(current_I + 1);
                 }
             }
-            $('#F__ID input[name="Consent"]').on('change', function () {
-                if ($('#F__ID input[name="Consent"]:checked').val()=='N') {
-                    $('#not_consenting__ID').show();
+            $('#F__ID input[name="Agree"]').on('change', function () {
+                if ($('#F__ID input[name="Agree"]:checked').val()=='N') {
+                    $('#not_agreeing__ID').show();
                     $('#next__ID').hide();
                 }
                 else{
                     $('#next__ID').show();
-                    $('#not_consenting__ID').hide();
+                    $('#not_agreeing__ID').hide();
                 }
             })
             //---------------------------
