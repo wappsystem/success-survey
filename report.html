@@ -6,33 +6,7 @@
         <meta name="description" content="">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel="icon" href="data:,">
-        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
-        <meta name="theme-color" content="#404a7c">
-    
-        <!-- GOOGLE WEB FONT -->
-        <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700" rel="stylesheet">
-    
-        <!-- BASE CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/styleeligibility.css" rel="stylesheet">
-        <link href="css/vendors.css" rel="stylesheet">
-        
-        <!-- MODERNIZR MENU -->
-        <script src="js/modernizr.js"></script>            
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
     </head>
     <body>
         <!-- Typical website layout, the contents are dynamiclly updated by modules-->
@@ -44,7 +18,7 @@
     </body>
     <script boot-up>
         //------------------------------------
-        $vm={};$vm.ver=[0.01,0.01]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
+        $vm={};$vm.ver=[0.02,0.02]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
         $vm.debug=1;
         //------------------------------------
         //setup modules location
@@ -53,17 +27,17 @@
         //------------------------------------
         //where are your start modules
         $vm.start_modules=[
-            "$H/0/frame.html",  //app frame work
+            "$H/0-report/frame.html",  //app frame work
         ]
         for(i in $vm.start_modules) $vm.start_modules[i]=$vm.start_modules[i].replace('$H',$vm.hosting_path);
         //------------------------------------
         //modules used immediately
         $vm.module_list={
             //you can add modules here directly
-            "home":	        {url:"$H/m/elig-questions-form.html",Table:"succeed-survey-record",router:1},
-            "app":	        {url:"$H/0/app.html"},
-            "header":	    {url:"$H/0/header.html"},
-            "footer":	    {url:"$H/0/footer.html"},
+            "home":	        {url:"$H/0-report/home.html",router:1},
+            "app":	        {url:"$H/0-report/app.html"},
+            "header":	    {url:"$H/0-report/header.html"},
+            "footer":	    {url:"$H/0-report/footer.html"},
         };
         for(p in $vm.module_list) $vm.module_list[p].url=$vm.module_list[p].url.replace('$H',$vm.hosting_path);
         //------------------------------------

@@ -1,0 +1,58 @@
+<div id=D__ID>
+	<div id=page__ID>
+		<div class='panel__ID col text-center'>
+			<h1>Succeed Study<br></h1>
+			<p></p>
+			<p>&nbsp;</p>
+			<!--<button type="button" id=test__ID class="btn btn btn-outline-dark text-white">Dashboard</button>-->
+			<p>&nbsp;</p>
+		</div>
+	</div>
+	<style>
+		#D__ID{
+			height:100%;
+	        overflow:auto;
+			animation: vm_module_fadein 1.0s, D__ID 3s;
+	        padding-bottom:10%;
+		}
+		#page__ID{
+			height:100%;
+			display: flex;
+			align-items: center;
+		}
+		#page__ID h1 {
+			font-size: 60px;
+			color: rgba(233, 233, 233, 0.8);
+			line-height: 1.2;
+			font-weight: 400;
+			/*text-transform: uppercase;*/
+			text-align: center !important;
+			margin-top: 20px;
+			font-family: "Roboto Slab", Arial, sans-serif;
+		}
+		.panel__ID{
+			padding-top: 100px;
+			font-size: 20px;
+			line-height: 1.5;
+			font-weight: 600;
+			color: rgba(233, 233, 233, 1);
+			font-family: "Nunito Sans", Arial, sans-serif;
+		}
+		@keyframes D__ID {
+			from {padding-top: 300px;}
+			to {padding-top: 0px;}
+		}
+	    @media screen and (max-width: 992px) {
+	        #D__ID{
+	            animation: vm_module_fadein 1.0s;
+	        }
+	    }
+	</style>
+	<script>
+		function F__ID(){
+			$('#test__ID').on('click',function(e){
+      		  $vm.load_module_v2('panel-main-nrs',$vm.root_layout_content_slot,{});
+    		})
+		}
+	</script>
+</div>

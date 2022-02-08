@@ -1,0 +1,67 @@
+<div id=D__ID module=app>
+    <!-- special font, css etc for this app -->
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Roboto+Slab' />
+    <!-------->
+    <script main-code>
+        //------------------------------------
+        $vm.api_address="https://api.wappsystem.com";
+        if(window.location.toString().indexOf('_p=1')!=-1) $vm.api_address="https://api.wappsystem.com:3000";
+        //------------------------------------
+        $vm.default_title="SUCCEED Recruitment";
+        //------------------------------------
+        var ready1=function(){
+            var set_layout=function(){
+                $vm.min_height=$(window).height()-$('#header').outerHeight();
+                $('#content').css('min-height',$vm.min_height);
+                $('#content').css('padding-top',$('#header').outerHeight());
+            }
+            //------------------------------------
+            set_layout();
+            //-----------------------------------------
+            $vm.show=function(m_name){
+                var nm="";
+                var ns=window.location.href.split('?/');
+                if(ns.length>1) nm=ns[1].split('&')[0].replace('-data','').replace(/-/g,' ');
+                document.title=$vm.default_title;
+                if(nm!=""){
+                    var name=nm.charAt(0).toUpperCase() + nm.slice(1)
+                    document.title=name+" | "+$vm.default_title;
+                }
+                $("meta[name='description']").attr("content", "Research Study Data Collection");
+                $("body").removeClass();
+                $("body").addClass('body_background_default');
+                $vm.active_id=undefined;
+                $vm.active_name=undefined;
+                if(m_name!=undefined){ $vm.active_id=$vm.module_list[m_name].id; $vm.active_name=m_name; }
+                if(m_name!=undefined && $vm.module_list[m_name].show!=undefined) $vm.module_list[m_name].show();
+                if($vm.active_id!=undefined){
+                    $('#D'+$vm.active_id).css('height','unset');
+                    $('#D'+$vm.active_id).css('min-height',($(window).height()-$('#header').outerHeight())+"px");
+                    $('#D'+$vm.active_id).css('overflow','hidden');
+                    $('#D'+$vm.active_id).css('overflow-x','auto');
+                }
+            }
+            //------------------------------------
+            window.onresize=function(){set_layout();}
+            //------------------------------------
+            $vm.init(function(){
+                $vm.init_status=1;
+                $vm.show_user();
+            })
+            //------------------------------------
+            if($vm.first_module!=undefined) $vm.show($vm.first_module);
+            //------------------------------------
+        }
+        //-------------------------------------
+        var I=0; var loop_1=setInterval(function (){
+            if($vm['header_ready']==1 && $vm['footer_ready']==1){  clearInterval(loop_1); ready1(); }
+            I++; if(I>50){ clearInterval(loop_1); alert("header error."); }
+        },100);
+        //-------------------------------------
+    </script>
+    <style main-style>
+        html,body{ margin:0; padding:0; height:100%; font-family:'Arial';}
+        body{background-size: cover; background-repeat: repeat-x; background-position: center top; background-attachment: fixed;}
+        .body_background_default{ background-image: url(https://images.unsplash.com/photo-1612741731345-f68c46ab696b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920);}
+    </style>
+</div>

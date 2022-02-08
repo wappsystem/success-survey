@@ -1,9 +1,11 @@
 (function(){
     var modules={
         "not_elig":         {url:"$H/m/not_elig.html"},
+        "eligible-form":         {url:"$H/m/eligible-form.html",Table:"succeed-eligible"},
         "thanks":         {url:"$H/m/thanks.html"},
         "survey-data": {url:"$H/m/elig-questions-data.html",Table:"succeed-survey-record",form_module:"survey-form"},
         "survey-form": {url:"$H/m/elig-questions-form.html",Table:"succeed-survey-record"},
+        "panel-main-succeed":{url:"$H/m/elig-questions-data.html",Table:"succeed-survey-record",form_module:"survey-form"},
         
     }
     for(p in modules){

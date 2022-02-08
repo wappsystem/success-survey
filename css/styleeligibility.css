@@ -605,7 +605,7 @@ button[disabled] {
   display: none;
 }
 
-button.submit:before {
+/*button.submit:before {
   content: "\4e";
   font-family: 'ElegantIcons';
   position: absolute;
@@ -613,7 +613,7 @@ button.submit:before {
   right: 10px;
   font-size: 18px;
   font-size: 1.125rem;
-}
+}*/
 
 .backward:hover {
   background: #E0B1C6;
@@ -1864,7 +1864,7 @@ input[type=file]::-webkit-file-upload-button:focus, input[type=file].invalid::-w
 }
 
 .wrapper_success {
-    height: 20vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
