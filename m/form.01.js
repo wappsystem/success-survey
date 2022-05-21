@@ -117,7 +117,8 @@ m.submit=function(event){
     if(m.before_submit!=undefined) r=m.before_submit(data,index);
     if(r==false){$('#submit__ID').show(); return;}
     //--------------------------------------------------------
-    var rid=undefined; if(m.input!=undefined && m.input.record!=undefined) rid=m.input.record._id;
+    //var rid=undefined; if(m.input!=undefined && m.input.record!=undefined) rid=m.input.record._id;
+    var rid=record_id;
     if(rid==undefined){
         var i_cmd="insert";
         if(m.cmd_type=='table') i_cmd='insert-table';
@@ -134,10 +135,12 @@ m.submit=function(event){
                 if(m.after_insert!=undefined){
                     m.after_insert(data,res); return;
                 }
+                record_id=res.nr._id;
+console.log("add:"+record_id)                
                 $vm.refresh=1;
                 //if(m.change_status==undefined) m.change_status=0;
                 m.change_status++;
-                if(m.input.goback!=undefined) window.history.go(-1);            //from grid
+                //if(m.input.goback!=undefined) window.history.go(-1);            //from grid
                 //else $vm.alert('Your data has been successfully submitted');    //standalone
             }
             if(FN==0) after_submit();
@@ -175,7 +178,7 @@ m.submit=function(event){
                 $vm.refresh=1;
                 //if(m.change_status==undefined) m.change_status=0;
                 m.change_status++;
-                if(rid!=undefined) window.history.go(-1);                       //modify
+                //if(rid!=undefined) window.history.go(-1);                       //modify
             }
             //-----------------------------
             if(FN==0) after_submit();

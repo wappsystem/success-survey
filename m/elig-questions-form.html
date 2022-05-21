@@ -1023,12 +1023,14 @@
             //---------------------------------------
             var N = 22;
             var current_I = 1;
+            var record_id=undefined;
             //---------------------------------------
             m.before_submit = function (data, index) {
                 return true;
             }
             //---------------------------------------
             $('#D__ID').on('load', function () {
+                record_id=undefined;
                 $('#header').css('opacity', '0.8');
                 $('#submit1__ID').show();
                 $('#q4-1__ID').hide();
@@ -1193,7 +1195,11 @@
                     $('#submit1__ID').hide();
                     old_submit(event);
                 }
-                else show_section(current_I + 1);
+                else{
+                    $('#F__ID *').removeAttr('disabled');
+                    old_submit(event);
+                    show_section(current_I + 1);
+                }
             }
 
             //---------------------------
