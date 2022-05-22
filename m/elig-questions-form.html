@@ -980,6 +980,9 @@
                             <button type=submit id=next__ID d=1 class="forward">Next</button>
                             <button type="submit" id=submit1__ID class="submit">Submit</button>
                         </div>
+                        <div>
+                            <input type="text" name="progress" id="progress__ID" style="display:none" >
+                        </div>
                     </form>
                 </div>
                 <!-- /Wizard container -->
@@ -1173,6 +1176,7 @@
                         scores.PHQ > 20 ||
                         scores.PHQ_9 > 1 ||
                         scores.SB >= 2) {
+                        $('#progress__ID').val('Not Eligible');
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
@@ -1191,11 +1195,13 @@
                     }
                 }
                 else if (current_I == N) {
+                    $('#progress__ID').val('Completed all');
                     $('#F__ID *').removeAttr('disabled');
                     $('#submit1__ID').hide();
                     old_submit(event);
                 }
                 else{
+                    $('#progress__ID').val(current_I);
                     $('#F__ID *').removeAttr('disabled');
                     old_submit(event);
                     show_section(current_I + 1);
