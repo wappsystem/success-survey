@@ -1,0 +1,58 @@
+<div id=D__ID>
+	<!--third html start -->
+	<div class="container mt-95 mb-3">
+		<div class="row">
+			<!-- form container start -->
+			<div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+				<div class="row">
+					<div class="col-12">
+						<!-- form start -->
+						<form id="F__ID">
+							<h3 id=title__ID></h3>
+							<!-- participant name and study id -->
+							<div id="participant_div__ID">
+								<div class="form-group">
+									<fieldset class="subquestions">
+										<label><span class="">Participant ID</span>
+											<input type=text name="Participant_uid" class=form-control readonly />
+										</label>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class="subquestions">
+										<label><span class="">Access Code Reminder 1 Date</span>
+											<input class="form-control" type="date" name="Reminder_1_Access_Code">
+										</label><br>
+									</fieldset>
+								</div>
+							</div>
+							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function F__ID() {
+			//-------------------------------------
+			VmInclude: __COMPONENT__/f/form.01.js
+			VmInclude: __CURRENT_PATH__/shared-form.js
+			//-------------------------------------
+			var before_submit = m.before_submit;
+			m.before_submit = function (data, index) {
+				return before_submit(data, index);
+			}
+			//-------------------------------------
+		}
+	</script>
+	<style>
+		#D__ID .mt-95 {
+			max-width: 600px;
+		}
+
+		VmInclude:__CURRENT_PATH__/wappsystem-form.css
+	</style>
+</div>

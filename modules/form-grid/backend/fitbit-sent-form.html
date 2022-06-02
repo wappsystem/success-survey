@@ -1,0 +1,74 @@
+<div id=D__ID>
+	<!--third html start -->
+	<div class="container mt-95 mb-3">
+		<div class="row">
+			<!-- form container start -->
+			<div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+				<div class="row">
+					<div class="col-12">
+						<!-- form start -->
+						<form id="F__ID">
+							<h3 id=title__ID>Fitbit Sent Date</h3>
+							<!-- participant name and study id -->
+							<div id="participant_div__ID">
+								<div class="form-group">
+									<fieldset class="subquestions">
+										<label><span class="">Participant ID</span>
+											<input type=text name="Participant_uid" class=form-control readonly />
+										</label>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class="subquestions">
+										<label><span class="">Fitbit Sent Date</span>
+											<input class="form-control" type="date" name="Fitbit_sent" id="fitbit__ID">
+										</label><br>
+									</fieldset>
+								</div>
+							</div>
+							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function F__ID() {
+			//-------------------------------------
+			VmInclude: __COMPONENT__/f/form.01.js
+			//-------------------------------------
+            m.default_load = m.load;
+            m.load = function () {
+                m.default_load();
+                if($('#fitbit__ID').val()==undefined || $('#fitbit__ID').val()=="") $('#emaildate__ID').val(get_now_date());   
+            }
+			//-------------------------------------
+            var get_now_date = function () {
+                var today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth() + 1; //January is 0!
+                var yyyy = today.getFullYear();
+                var hh = today.getHours()
+                var mn = today.getMinutes()
+                var ss = today.getSeconds()
+                if (dd < 10) { dd = '0' + dd; }
+                if (mm < 10) { mm = '0' + mm; }
+                if (mn < 10) { mn = '0' + mn; }
+                if (hh < 10) { hh = '0' + hh; }
+                if (ss < 10) { ss = '0' + ss; }
+                return yyyy + '-' + mm + '-' + dd;
+            }
+
+		}
+	</script>
+	<style>
+		#D__ID .mt-95 {
+			max-width: 600px;
+		}
+    /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+    /*VmInclude:__HOST__/assets/css/style.css*/
+</style>
+</div>

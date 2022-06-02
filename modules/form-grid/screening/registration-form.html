@@ -1,0 +1,274 @@
+<div id=D__ID>
+    <div class="bg-light">
+        <form id=F__ID>
+            <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#1c2350;">
+                <div class="col-lg-1 col-sm-0 "></div>
+                <div class="col-lg-9 col-sm-12 text-center text-white">
+                    <span style="color:#888"></span>
+                    <h2>Asteroid Registration</h2>
+                </div>
+                <div class="col-lg-1 col-sm-0 "></div>
+            </div>
+            <div id=quest5__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>Thank you for completing these questions.</h3>
+                            <h4>Your responses indicate that you are eligible to participate in the study. Please proceed by clicking next to read the Participant Information Sheet carefully and at your own pace, and if you would like to consent to the study please tick the box and digitally sign the consent form at the end. </h4>
+                        </div>
+                    </div> 
+                </div>                     
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h5>Please proceed by reading the <a href="#" data-toggle="modal" data-target="#terms-txt">Participant Information Sheet(click here)</a> carefully and at your
+                                own pace and tick the box for consent
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h5>I consent to participate in the study</h5>
+                    <div class="questiongroup">
+                        <fieldset>
+                        <label class="checkboxes">
+                            <input type="checkbox" name="Consent" value="Yes">
+                            <span class="check_checkmark"></span> Yes
+                        </label><br>
+                    </div>                              
+                </div>
+                <div class="form-group box">
+                    <h3>Contact details</h3>
+                    <div class="questiongroup ">
+                        <fieldset class="subquestions">
+                            <label><span class="">First name</span>
+                                    <input class="form-control" type="text" name="first_name" >
+                            </label><br>
+                            <label><span class="">Family name</span>
+                                    <input class="form-control" type="text" name="last_name" >
+                            </label><br>
+                        </fieldset>
+                        <fieldset class="subquestions">
+                            <label><span class="">Mobile number</span>
+                                <input type="tel" class="form-control" name="phone" id="mobileNumber__ID" required placeholder="XXXX-XXX-XXX" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
+                            </label><br>
+                        </fieldset>
+                        <fieldset class="subquestions">
+                            <label style="width:100%"><span class="">Email Address</span>
+                                <input class="form-control" type="email" name="email" >
+                            </label><br>
+                        </fieldset>
+                        <div class="questiongroup box">
+                            <h3>Contact preference</h3>
+                            <fieldset class="pl-4">
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="contact" value="1" required>
+                                    <span class="checkmark"></span>Text
+                                </label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="contact" value="2">
+                                    <span class="checkmark"></span>Email 
+                                </label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="contact" value="3">
+                                    <span class="checkmark"></span>Both 
+                                </label>
+                            </fieldset>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group box" id="link__ID" style="display:none!important">
+                    <div class="text-center">
+                        Continue ..<br><br>
+                        <i>Click on the link below to continue. Save the link to your favorits so you can easlily find it, if you need to return to the quesstionnaires.</i><br><br>
+                        <a id=asteroind_registration__ID target="_blank" style="color:#000;" ><span style='font-size:1.2rem;font-weight:bold;' id=refnum__ID></span></a>
+                        <br><br>
+                    </div>
+                </div>
+                <div style="display:none">
+                    <input type=text class=form-control name=_Password>
+                    <input type=text class=form-control name=List>
+                </div>
+                <div class="box" style="text-align:right">
+                    <div class="box-item">
+                        <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </div>
+                <div id=quest51__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                    <br>
+                    <hr>
+                    <div class="text-center">
+                        Contact Us
+                        <br><br>
+                        Phone: (02) 9114 0xxx<br>
+                        Email: woolcock.asteroid@sydney.edu.au<br><br>
+                        Thanks you for your time and effort,<br>
+                        <b>The Asteroid Research Team</b><br>
+                    </div>
+                </div>
+                <!----------------------------------------->
+            </div>
+        </form>
+    </div>
+    <!----------------------------------------->
+    <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="termsLabel">Patient Information sheet</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div align="right">
+                        <a href="pdf/Participant_Information_Sheet_and_Consent_Form.pdf" download="">Download a copy of
+                            the Information Sheet
+                            <img src="https://img.icons8.com/office/40/000000/pdf.png"></a>
+                    </div>
+                    <object data="pdf/Participant_Information_Sheet_and_Consent_Form.pdf" type="application/pdf"
+                        frameborder="0" width="100%" height="2000px">
+                        <embed src="pdf/Participant_Information_Sheet_and_Consent_Form.pdf" width="100%"
+                            height="2000px" />
+                    </object>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn_1" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <script>
+        function F__ID() {
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            //---------------------------------------
+            $('#D__ID').on('load', function () {
+                console.log(JSON.stringify(m))
+                $('#F__ID input[name=_Password').val($vm.vm_password(8,false));
+            });
+            //-------------------------------------
+            $('#mobileNumber__ID').on('change', function () {
+                var mn = $('#mobileNumber__ID').val();
+                if (mn.length == 10) {
+                    $('#mobileNumber__ID').val(mn.substring(0, 4) + '-' + mn.substring(4, 7) + '-' + mn.substring(7, 10))
+                }
+            })
+            //---------------------------------------
+            m.before_submit=function(data,index){
+                data.List='demographic-form,psqi-bl-form,gad7-bl-form,ffs-bl-form,ess-bl-form,bc-cci-bl-form,eq-5d-bl-form,eheals-bl-form'
+            }
+            //---------------------------------------
+            m.after_insert = function (data,index) {
+                var db=""; 
+                //console.log(JSON.stringify(index) + " - "+index.result.ops[0].UID)
+                if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                var u="?username="+index.result.ops[0].UID+"&password="+$('#F__ID input[name=_Password').val();
+                $('#id__ID').text(index.result.ops[0].UID);
+                $('#password__ID').text($('#F__ID input[name=_Password').val());
+                var q_url=$vm.hosting_path+"/bl_quest.html"+u+db+d+p;
+                $('#refnum__ID').text(q_url);
+                $('#asteroind_registration__ID').attr("href",q_url)
+                $('#link__ID').show();
+
+                //- UPDATE Screening record with participant UID -----
+                var rid=m.input.rec_id
+                var datascreen=m.input.screen_data;
+                datascreen.Participant=index.result.ops[0].UID;
+                datascreen.Participant_uid=index.result.ops[0].UID;
+                var tables=$vm.module_list["screening-data"].Table; 
+                console.log("data: "+JSON.stringify(datascreen))             
+                $vm.request({cmd:'update',id:rid,table:tables,data:datascreen,index:index},function(res){
+                    //-----------------------------
+                    if(res.status=="lk"){
+                        $vm.alert("This record is locked.");
+                        return;
+                    }
+                    //-----------------------------
+                    if(res.status=="np"){
+                        alert("No permission to update this record.");
+                        return;
+                    }
+                });
+                // -------------------------------------------------
+                var param = [];
+				var url='https://prod-16.australiasoutheast.logic.azure.com:443/workflows/0b629b773bb041b4a7d3c32e306f26ea/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OeUNihtrWSKL8eSpsFgINO9DVoWBy5l0C4RmJYACOZE';
+				var sms_url='https://prod-03.australiasoutheast.logic.azure.com:443/workflows/eed8c7b103234b02a09a703cc6f501f2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Z-qKIOUSRbMY-i6_BS32lbZy30kcoPFAZPfh15uGdIE';
+				param.push(data.email); //0
+				param.push(data.first_name); //1
+				param.push(q_url); //2
+				param.push(''); //3 Access code
+				param.push(data.phone) //4
+				param.push(data.contact) //5
+				param.push(url) //6
+				param.push(sms_url) //7
+				send_email(param);              
+            }
+            //-------------------------------------
+            var send_email = function (param) {
+                var url = param[6]
+                var sms_url = param[7]
+                if(param[5]=='2' || param[5]=='3'){
+                    var data = {
+                        "emailaddress": "" + param[0] + "",
+                        "first_name": "" + param[1] + "",
+                        "link": "" + param[2] + "",
+                        "code": "" + param[3] + ""
+                    }
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                        }
+                        else if (this.readyState == 4 && this.status == 403) {
+                        }
+                        if (this.status == 404) {
+                            $vm.alert(url + ", 404 (Not found)");
+                        }
+                    }
+                
+                    xmlHttp.open("POST", url, true); // true for asynchronous
+                    xmlHttp.setRequestHeader("Content-Type", "application/json");
+                    xmlHttp.send(JSON.stringify(data));
+                    //alert("Registration email sent" +JSON.stringify(data))
+                }
+                //------------------------------------
+                //SMS alert
+				//------------------------------------
+                if(param[5]=='1' || param[5]=='3'){
+                    var sms_data = {
+                        "emailaddress": "" + param[4].replace(/-/g,'') + "@e2s.directsms.com.au",
+                        "first_name": "" + param[1] + "",
+                        "link": "" + param[2] + "",
+                        "code": "" + param[3] + ""
+                    }
+                    var sms_xmlHttp = new XMLHttpRequest();
+                    sms_xmlHttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                        }
+                        else if (this.readyState == 4 && this.status == 403) {
+                        }
+                        if (this.status == 404) {
+                            $vm.alert(url + ", 404 (Not found)");
+                        }
+                    }
+                    sms_xmlHttp.open("POST", sms_url, true); // true for asynchronous
+                    sms_xmlHttp.setRequestHeader("Content-Type", "application/json");
+                    sms_xmlHttp.send(JSON.stringify(sms_data));
+                    //alert("Registration sms sent" +JSON.stringify(sms_data))
+				}
+			}
+            //--------------------------------
+
+        }
+    </script>
+    <style>
+        #submit_box__ID {
+            text-align: right;
+        }
+        /*VmInclude:__HOST__/assets/css/style.css*/
+        /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+    </style>
+</div>

@@ -1,0 +1,177 @@
+<div id=D__ID>
+    <div>
+        <div id=toolbar__ID class="navbar navbar-default">
+        	<form class="form-inline">
+        		<button type=button id=count__ID class='btn btn-secondary'>Count</button>
+        	</form>
+        	<span id=elapsed__ID style='float:right'></span>
+		</div>
+        <section id=panel__ID>
+        	<div class='nav__ID'>
+        		<span>Consented Participants</span>
+        		<ul>
+        			<li><a href=?/participant-data>Participants</a></li>
+				</ul>
+        		<span>Notes</span>
+        		<ul>
+        			<li><a href=?/notes-data>All Task Notes</a></li>
+				</ul>
+                <span>Access Code</span>
+        		<ul>
+        			<li><a href=?/access-code-data>Access Code</a></li>
+        		</ul>
+				<br>
+                <span>Randomisation</span>
+        		<ul>
+        			<li><a href=?/randomisation-table-data>Randomisation table</a></li>
+        		</ul>
+				<br>
+
+           	</div>
+        	VmInclude:__CURRENT_PATH__/backend-tasks.html
+        </section>
+    </div>
+    <script>
+        function F__ID(){
+            //--------------------------------------------------------
+            var m=$vm.module_list['__MODULE__'];
+            //--------------------------------------------------------
+            $('#panel__ID a').on('click',function(e){
+                e.preventDefault();
+                var href=$(this).attr('href');
+                var app=$(this).attr('app');
+                if(href!=undefined){
+                    href=href.replace('?\/','');
+                    href=href.replace(/\//g,'_');
+                    if(app==undefined) $vm.load_module(href,'',{});
+                    else if($vm.module_list[href]!=undefined) window.open($vm.module_list[href].url);
+                    else alert("The '"+ href +"' is not defined in the module list");
+                }
+            })
+            //--------------------------------------------------------
+            $('#panel__ID a').each(function(){
+                var href=$(this).attr('href');
+                if(href!=undefined){
+                    href=href.replace('?\/','');
+                    href=href.replace(/\//g,'_');
+                    if($vm.module_list[href]!=undefined){
+                        var url=$vm.module_list[href].url;
+                        $(this).attr('title',url);
+                    }
+                }
+            })
+            //--------------------------------------------------------
+        	var set_a_text=function(){
+        	    $('.nav__ID a').each(function(){
+        	        $(this).attr('data-a_text',$(this).text());
+        	    })
+        	}
+        	set_a_text();
+        	//---------------------------------------------
+        	var clear_counting=function(){
+        		$('.nav__ID a').each(function(){
+        			var txt=$(this).attr('data-a_text');
+        			if(txt!=undefined){
+        				$(this).text(txt);
+        			}
+        		})
+        	}
+        	//---------------------------------------------
+        	$('#count__ID').on('click',function(){
+        		clear_counting();
+        		var N=0;
+        		$('#panel__ID a').each(function(){
+        			var $a=$(this);
+        			N++;
+        			var href=$a.attr('href');
+        			if(href!=undefined){
+        				check_count($a,N);
+        			}
+        		});
+        	})
+        	//--------------------------------------------------------
+        	var check_count=function($a,N){
+        		//do not send too many requests to the server in a short period
+        		setTimeout(function(){check_count_d($a)}, N*200);
+        	}
+        	//--------------------------------------------------------
+        	var check_count_d=function($a){
+        		var href=$a.attr('href');
+				href=href.replace('?\/','');
+        		if($vm.module_list[href]!=undefined){
+        			var tb=$vm.module_list[href].Table;
+        			if(tb!=undefined){
+						$vm.request({cmd:"count",table:tb,query:{},options:{}},function(res){
+							if(res.sys.permission==false){
+								return;
+							}
+							var txt=$a.attr('data-a_text');
+							txt=$('<div/>').html(txt).text();
+							var num=$('<div/>').html(res.result).text();
+							$a.html(txt+" <mark style='background-color:#fff;font-size:9px'>["+num+"]</mark>")
+						});
+        			}
+        		}
+        	}
+        	//--------------------------------------------------------
+        }
+    </script>
+    <style>
+        #toolbar__ID{
+    		background-color:#ccc;
+    		padding-left:10px;
+    		margin-bottom:0px;
+    		overflow:hidden'
+    	}
+        #toolbar__ID .form-inline > * {
+            margin-right:5px;
+        }
+    	@media screen and (max-width:768px){
+    		#toolbar__ID{
+    			padding: 3px 10px;
+    		}
+    		#toolbar__ID div{
+    			padding-left:3px;
+    		}
+    	}
+        #D__ID{
+    		background-color:#fff;
+    		height:100%;
+    		overflow: auto;
+    		animation: vm_module_fadein 1.0s;
+    	}
+        #panel__ID{
+    		padding:10px 0 0 20px;
+            font-size:14px;
+    	}
+    	#panel__ID a {
+    		text-decoration: none;
+    	}
+    	#panel__ID a:link {
+    		color:#555;
+    	}
+    	#panel__ID a:visited {
+    		color:#555;
+    	}
+    	#panel__ID a:hover {
+    		color:red;
+    	}
+    	#panel__ID a:active {
+    		color:#555;
+    	}
+        .nav__ID{
+	        padding:6px 26px 6px 6px;
+	        float:left;
+	    }
+	    .nav__ID span{
+			color:#283f55;
+			font-weight: bold;
+			margin:3px 10px;
+	    }
+    	@media screen and (max-width:768px){
+    		#panel__ID{
+    			padding:10px 0 0 10px;
+    		}
+    	}
+    </style>
+</div>

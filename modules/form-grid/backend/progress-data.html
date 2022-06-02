@@ -1,0 +1,71 @@
+<div id=D__ID>
+    <div>
+        VmInclude:__COMPONENT__/g/grid.01.html
+    </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js       
+            //-------------------------------------
+            $('#title__ID').text('Participants');            
+            //-------------------------------------
+            var fields="_Participant_ID,Group,first_name,last_name,phone,email,contact";
+            m.fields="_Form,"+fields+",Submit_date,Submitted_by,_Delete";
+            //-------------------------------------
+            m.load=function(){
+                //m.query={"Data.first_name": {"$ne" : ""}}
+                
+            }
+            m.cell_render=function(records,I,field,td,set_value,source){
+                switch(field){
+                    case 'DOB':
+                        if(records[I].Data.DOB!=''){
+                            var dob=(records[I].Data.DOB).split('-');
+                            td.html(dob[2]+'/'+dob[1]+'/'+dob[0]);
+                        }
+                        break;
+                    case '_Participant_ID':
+                        td.html(records[I].UID);
+                        break;
+                }
+            }
+            //-------------------------------------
+            m.export_records=function(){
+                tabledata=m.Table;
+                m.Table=$vm.module_list['participant-data'].Table;
+                var participant_rec={};
+                var req={cmd:"export",table:m.Table,I1:m.I1,search:$('#keyword__ID').val()}
+                open_model__ID();
+                $vm.request(req,function(N,i,txt){
+                    //console.log(i+"/"+N);
+                    $('#msg__ID').text((100*i/N).toFixed(0)+"%");
+                    if(i==-1){
+                        var len=txt.length;
+                        n_txt="["+txt.substring(5,len-9)+"]";
+                        //console.log(n_txt)
+                        participant_rec=JSON.parse(n_txt);
+                        //Order by m.fields
+                        var fields_ex=m.fields.replace("_Participant_ID","ID").replace("Randomisation_Number|I1","Randomisation_Number")
+                        var export_fields=fields_ex.split(',');
+                        console.log(export_fields);
+                        //console.log(participant_rec);
+                        export_fields=export_fields.slice(1,export_fields.length-8);
+                        export_fields.push("_Password");
+                        export_fields.push("_Login_ID");
+                        export_fields.push("Submitted_by");
+                        console.log(export_fields);
+                        var oo=JSON.parse(JSON.stringify(participant_rec,export_fields));
+                        var tmp=JSON.stringify(oo).replace(/\bID\b/g,"Participant ID")
+                        oo=JSON.parse(tmp);
+                        //console.log(JSON.stringify(oo))
+                        $vm.download_csv(m.Table+".csv",oo);
+                        close_model__ID();
+                    }
+                }); 
+            }
+        }
+    </script>
+    <style>
+        /*VmInclude:__COMPONENT__/g/grid.01.css*/
+    </style>
+</div>

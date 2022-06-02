@@ -1,0 +1,30 @@
+<div id=D__ID>
+    <div id="footer">
+            <div class="container">
+                    <p  style="color:rgb(255, 255, 255)" >All rights reserved. The University of Sydney and Woolcock Institute of Medical Research 2022. <a target="_blank" href="https://spardac.wappsystem.com.au">Powered by Wappsystem</a></p>
+                </div>
+   </div>
+    <script>
+        $vm.footer_ready=1;
+        if($vm.resize_content!=undefined) $vm.resize_content();
+        $('#D__ID').on('dblclick',function(event){
+            event.stopPropagation();
+            if (event.ctrlKey & event.altKey) {
+                var r=confirm("Click OK will refresh the browser to reinstall all modules.");
+                if(r){
+                    localStorage.clear();
+                    location.reload();
+                }
+            }
+	    });
+        $('#year__ID').text(new Date().getFullYear());
+    </script>
+    <style>
+        #D__ID{
+            padding-left:15px;
+            background-color: #0e0b1c;
+            text-align: center;
+        }     
+        /*VmInclude:__HOST__/assets/css/style.css*/       
+    </style>
+</div>
