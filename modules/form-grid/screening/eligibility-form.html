@@ -98,6 +98,30 @@
                         </div>
                     </div>
                     <div class="form-group box">
+                        <div class="row">
+                            <div class="col-sm control-group">
+                                <h3>Are you a professional driver or do you operate heavy machinery?
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="questiongroup">
+                            <fieldset class="pl-4">
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="heavy_machinery" value="N" required>
+                                    <span class="checkmark"></span>No
+                                </label><br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="heavy_machinery" value="driver">
+                                    <span class="checkmark"></span>Yes, I am a professional driver. 
+                                </label><br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="heavy_machinery" value="machinery">
+                                    <span class="checkmark"></span>Yes, I do operate heavy machinery. 
+                                </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group box">
                         <div class="control-group">
                             <h3>Have you travelled to a destination with a time difference of more than 2 hours
                                 in the past month?
@@ -114,7 +138,6 @@
                             </fieldset>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div id=S3__ID>
@@ -1273,6 +1296,7 @@
                         $("input[name='englishfluency']:checked").val() == 'N' ||
                         $("input[name='smartphone']:checked").val() == 'N' ||
                         $("input[name='shiftworker']:checked").val() != 'N' ||
+                        $("input[name='heavy_machinery']:checked").val() != 'N' ||
                         $("input[name='travelled']:checked").val() == 'Y' ||
                         $("input[name='head_injury']:checked").val() == 'Y' ||
                         $("input[name='stroke']:checked").val() == 'Y' ||
@@ -1311,13 +1335,16 @@
                         $('#previous__ID').hide();
                         $('#next__ID').hide();
 
-                    }
+                   }
                 }
                 else if (current_I == N) {
                     $('#progress__ID').val('Completed all');
                     $('#F__ID *').removeAttr('disabled');
                     $('#submit1__ID').hide();
                     old_submit(event);
+                    if (m.prefix == undefined) { $vm.load_module('thank_you', '', {}); }
+                    else $vm.load_module(m.prefix + 'thank_you', '', {});
+
                 }
                 else {
                     $('#progress__ID').val(current_I);
