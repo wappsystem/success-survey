@@ -162,12 +162,12 @@
             //---------------------------------------
             m.after_insert = function (data,index) {
                 var db=""; 
-                //console.log(JSON.stringify(index) + " - "+index.result.ops[0].UID)
+                //console.log(JSON.stringify(index) + " - "+index.nr.UID)
                 if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
                 var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
                 var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
-                var u="?username="+index.result.ops[0].UID+"&password="+$('#F__ID input[name=_Password').val();
-                $('#id__ID').text(index.result.ops[0].UID);
+                var u="?username="+index.nr.UID+"&password="+$('#F__ID input[name=_Password').val();
+                $('#id__ID').text(index.nr.UID);
                 $('#password__ID').text($('#F__ID input[name=_Password').val());
                 var q_url=$vm.hosting_path+"/bl_quest.html"+u+db+d+p;
                 $('#refnum__ID').text(q_url);
@@ -177,8 +177,8 @@
                 //- UPDATE Screening record with participant UID -----
                 var rid=m.input.rec_id
                 var datascreen=m.input.screen_data;
-                datascreen.Participant=index.result.ops[0].UID;
-                datascreen.Participant_uid=index.result.ops[0].UID;
+                datascreen.Participant=index.nr.UID;
+                datascreen.Participant_uid=index.nr.UID;
                 var tables=$vm.module_list["screening-data"].Table; 
                 console.log("data: "+JSON.stringify(datascreen))             
                 $vm.request({cmd:'update',id:rid,table:tables,data:datascreen,index:index},function(res){
