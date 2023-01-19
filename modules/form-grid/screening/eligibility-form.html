@@ -31,6 +31,28 @@
             <div id=S2__ID>
                 <div style='max-width:800px;margin-left:auto;margin-right:auto;'>
                     <div class="form-group box">
+                        <h3>How did you hear about this study?</h3>
+                        <div class="questiongroup ">
+                                    <select name="hear_about" class=form-control required>
+                                        <option></option>
+                                        <option>Memory clinic</option>
+                                        <option>Social media</option>
+                                        <option>Through a friend</option>
+                                        <option>Internet search/Web site</option>
+                                        <option>Other</option>
+                                    </select>
+                                </label><br>
+                            </fieldset>
+                            <div id=hear_about__ID style='display:none'>
+                                <fieldset class="subquestions">
+                                    <label style="width:100%" ><span class="">Please specify</span>
+                                        <input class="form-control" type="text" name="hear_about_other" placeholder="Please specify" >
+                                    </label><br>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="form-group box">
                         <h3>What is your date of birth?</h3>
                         <div class="questiongroup">
                             <fieldset class="pl-4">
@@ -1180,6 +1202,17 @@
                 show_section(1);
                 console.log("Load")
             })
+            //---------------------------------------
+            $('#F__ID select[name=hear_about]').on('change', function () {
+                if($('#F__ID select[name=hear_about]').val()=='Other'){
+                    $('#hear_about__ID').show();
+                    $("#F__ID input[name='hear_about_other']").prop('required', true)
+                }
+                else{
+                    $("#F__ID input[name='hear_about_other']").removeAttr('required');
+                    $('#hear_about__ID').hide();
+                }
+            })    
 
             //---------------------------------------
             $('#F__ID button').on('click', function (event) {
