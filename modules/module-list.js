@@ -13,10 +13,10 @@
    // m[p+"not_elig2"]         ={url:H+"/form-grid/screening/not_elig2.html"},
     //m[p+"not_elig3"]         ={url:H+"/form-grid/screening/not_elig3.html"},
 
-    //if(window.location.toString().indexOf('tb=demo')!=-1){
+    if(window.location.toString().indexOf('tb=demo')!=-1){
         for(p in $vm.module_list){
             $vm.module_list[p].Table="demo-"+$vm.module_list[p].Table;
         }
-    //}
+    }
 
 })();
