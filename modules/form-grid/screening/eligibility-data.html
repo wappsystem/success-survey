@@ -5,19 +5,28 @@
     <script>
         function F__ID(){
             //-------------------------------------
-            VmInclude:__COMPONENT__/g/grid.01.js       
+            VmInclude:__HOST__/assets/js/grid.01.js       
             //-------------------------------------
             $('#title__ID').text('Pre Screening');            
             //-------------------------------------
             var fields="Record_ID|UID";
+            var export_fields="ID"
             fields+=",progress,Agree,hear_about,hear_about_other,DOB,age,postcode,englishfluency,smartphone,shiftworker,heavy_machinery,travelled";
+            export_fields+=",progress,Agree,hear_about,hear_about_other,DOB,age,postcode,englishfluency,smartphone,shiftworker,heavy_machinery,travelled";
             fields+=",head_injury,stroke,consciousness,epilepsy,ms,bipolar,autism,schizophrenia,dementia";
+            export_fields+=",head_injury,stroke,consciousness,epilepsy,ms,bipolar,autism,schizophrenia,dementia";
             fields+=",sbd,crd,rls,narcolepsy";
+            export_fields+=",sbd,crd,rls,narcolepsy";
             fields+=",medication,cpap,mas,study,antidepressants,cbt";
+            export_fields+=",medication,cpap,mas,study,antidepressants,cbt";
             fields+=",PHQ_1,PHQ_2,PHQ_3,PHQ_4,PHQ_5,PHQ_6,PHQ_7,PHQ_8,PHQ_9,PHQ";
+            export_fields+=",PHQ_1,PHQ_2,PHQ_3,PHQ_4,PHQ_5,PHQ_6,PHQ_7,PHQ_8,PHQ_9,PHQ";
             fields+=",audit_1,audit_2,audit_3,audit,audit_consumption";
+            export_fields+=",audit_1,audit_2,audit_3,audit,audit_consumption";
             fields+=",ISI_1a,ISI_1b,ISI_1c,ISI_2,ISI_3,ISI_4,ISI_5,ISI_1,ISI";
+            export_fields+=",ISI_1a,ISI_1b,ISI_1c,ISI_2,ISI_3,ISI_4,ISI_5,ISI_1,ISI";
             fields+=",first_name,last_name,mobile,email,contact";
+            export_fields+=",first_name,last_name,mobile,email,contact";
             m.fields=""+fields+",Submit_date,Submitted_by,_Delete";
             //-------------------------------------
         }
